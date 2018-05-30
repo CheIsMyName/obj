@@ -1,0 +1,193 @@
+*{margin:0;padding:0}
+a{
+	color:#666;
+}
+a:hover{
+		text-decoration: none ;
+}
+body{
+	font-size: 12px;
+	background: #ffffff;
+}
+li{
+	list-style: none;
+}
+#top img{
+	
+	width:100%;
+}
+#top .row{
+	height:30px;
+	background:#f2f2f2;
+	line-height: 30px;
+}
+#head{
+	height:120px;
+	margin-top:28px;
+	
+}
+#head #txt{
+	border:red 2px solid;
+	
+	width:400px;
+	height:36px;
+}
+#head #btn{
+	margin-top: 20px;
+	width: 104px;
+	background: red;
+	height:36px;
+	border:red 2px solid;
+}
+#head p{
+	padding:5px;
+	color:#999
+}
+#head #btn-cart{
+	background:#fff;
+	color:red;
+	border:1px solid red;
+	height:36px;
+	width:140px;
+	margin:20px
+}
+#head #btn-cart img{
+	
+	padding-bottom:10px;
+}
+#head #btn-cart span{
+	padding-left:20px;
+	line-height:36px ;
+    
+}
+
+#nav{
+	margin-bottom:20px ;
+	height: 423px;
+	line-height: 40px;
+}
+#nav .left span{opacity:0}
+
+
+#nav .right span{opacity:0}
+
+
+.carousel-inner img{
+	height:300px;
+	width:100%;
+}
+#select{
+	position:absolute;
+	top:259px;
+	left:30px;
+}
+#select a{
+	color:#FFFFFF;
+}
+#select ul{
+
+	padding:0;
+	line-height: 40px;
+	text-align: center;
+	background: #000;
+	
+	width:200px;
+	
+}
+#select>ul>li{
+	
+	padding-right:20px ;
+	height: 40px;
+	
+}
+#select ul li ol{
+	
+	display: none;
+	position: relative;
+    left: 160px;
+    top: -40px;  
+}
+#select ul li ol li{
+	width:80px;
+	background: blanchedalmond;
+}
+
+#select ul li ol li:hover{
+	color:red;
+	background: blanchedalmond;
+	opacity: 1;
+}
+#select ul li:hover ol{
+	display: block;
+}
+#select ul li:hover{
+	opacity:0.5 ;
+	background: #666;
+}
+
+#brand span{
+	font-size: 20px;
+	
+}
+#hotbrand ul{
+	float:left;
+	width:130px;
+	
+}
+#hotbrand ul li{
+	box-sizing: border-box;
+}
+#hotbrand ul li:hover{
+	
+	border:solid red 1px ;
+}
+#hotbrand #last{
+	width:330px;
+	height:192px;
+	margin-left:5px;
+}
+#hotbrand #last img{
+	width:300px;
+}
+#products span{
+	font-size: 20px;
+	
+}
+#hotproduct #left{
+	float:left;
+}
+#hotproduct #left:first-child {
+	width:779px;
+	height:288px;
+}
+.imgleft{
+	margin-top:20px;
+	width:252px;
+	height:122px;
+}
+#hotproduct #right{
+	float:right;
+}
+#hotproduct #right img{
+	box-sizing: border-box;
+	width:310px;
+	height:432px;
+}
+#hotproduct img:hover{
+	border:solid red 1px;
+}
+#floor1 p{
+	width:250px;
+	height:60px;
+	background: blue;
+	color:#fff;
+	
+}
+#floor1 p span{
+	margin-left:33px;
+	margin-right: 30px;
+}
+#floor1 a{
+	
+	margin:30px;
+}
