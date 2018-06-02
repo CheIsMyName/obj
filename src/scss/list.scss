@@ -1,0 +1,136 @@
+a{
+    text-decoration: none;
+    
+}
+.nav{
+    text-align: center;
+    padding:10px;
+    margin:0 auto;
+    
+  
+}
+.nav a{
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.nav a:hover{
+    color: red;
+}
+.nav p{
+    float:left;
+    width:0px;
+    border:5px solid transparent;
+    border-left: 5px solid red;
+}
+#selector ul{
+    border: solid 1px #999;
+    display: none;
+   position: absolute;
+    left: -100px;
+    top:19px;
+    background: #fff;
+    z-index: 100;
+}
+#selector ul li{
+    margin-bottom: 10px;
+    margin-top:15px;
+    margin-right:50px;
+    float:left;
+}
+#selector span{
+   height: 20px;
+    border: solid 1px #999;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+}
+#selector span:hover ul{
+    display: block;
+}
+#selector #two{
+    left:-200px;
+}
+#selector #three{
+    left:-300px;
+}
+#selector #four{
+    left:-400px;
+}
+#selector #five{
+    left:-500px;
+}
+#selector #six{
+    left:-600px
+}
+.border-span{
+  
+    border: 1px solid #F2F2F2;
+    width: 931px;
+    height: 1px;
+    display: block;
+    margin-left: 70px
+}
+#screen{
+    margin-top: 20px;
+    
+}
+#screen ul li{
+    border: 1px solid transparent;
+    float:left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#screen ul li a{
+    text-decoration: none;
+}
+#screen ul li:hover{
+    border: red 1px solid;
+}
+#products{
+    clear: both;
+}
+#products dl{
+      border: 1px transparent solid;
+}
+#products dl:hover{
+    
+    border: 1px red solid;
+}
+#products p{
+    text-decoration: line-through;
+    width:80px;
+    float:left
+}
+#products h3{
+   
+    width:80px;
+    float:left;
+}
+#products h4{
+    padding-top:10px;
+    clear: both;
+    font-size: 12px;
+}
+#products h4 a:hover{
+    color: red;
+}
+
+#products span{
+    margin-top:10px;
+    display: block;
+    height:20px;
+    width:50px;
+    line-height: 20px;
+    float:left;
+}
+#products span {
+   color:#999
+}
+#products h6{
+    margin-top:10px;
+    height:20px;
+    text-align: right;
+    line-height: 20px;
+}
