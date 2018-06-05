@@ -12,6 +12,11 @@
 #shouye  p:hover{
     background: red;
 }
+
+
+#left:hover{
+    
+}
 #right{
     background:#F2F2F2;
     height:320px;
@@ -20,6 +25,7 @@
     text-align: center;
 }
 #right p{
+    margin-bottom: 30px;
     color:#fff;
     width:100%;
     background: red;
@@ -32,7 +38,7 @@
     background: red;
 }
 #right input{
-    margin-top:30px;
+    
     width:200px;
     height:30px;
     
@@ -40,7 +46,7 @@
 #right #btn{
     width: 230px;
     color:#fff;
-    margin-top:50px;
+    
     border-radius: 6px;
     background: green;
 }
@@ -60,3 +66,10 @@
     float: right;
 }
 
+
+#right #right-b2,#right #right-b,#right #right-b3{
+    position:absolute;
+    display: none;
+    color:red;
+    left:80px
+}

@@ -75,11 +75,22 @@
     </div>
 		  <div class="col-xs-4 ">
 		  	<div id="right">
-    		<p>登录</p>
+		  		<form action="login.html" method="post">
+		  	
+    		<p>注册</p>
     		
-    			<img src="img/user-30.png"/><input type="text" placeholder="手机号"/><br>
-    			<img src="img/lock-30.png"/><input type="password" placeholder="密码" /><br>
-    			<input type="button" id="btn" value="登录" /><br>
+    			<img src="img/user-30.png"/><input type="text" id="txt1" placeholder="手机号" value=""/>
+    			<br> <b>* 请输人正确的手机号</b><br>
+    			<img src="img/user-30.png"/><input type="text" id="txt3" placeholder="邮箱" value=""/>
+    			<br> <b>* 请输人正确的邮箱格式</b><br>
+    			
+    			<img src="img/lock-30.png"/><input type="password" id="pwd1" placeholder="密码" value=""/>
+    			<br><b>* 必须由字母数字组成</b><br>
+    			<img src="img/lock-30.png"/><input type="password" id="pwd2" placeholder="确认密码"  value="" />
+    			<br><b>* 密码不一致</b><br>
+    			<img src="img/user-30.png"/><input type="text"  id="txt2" placeholder="验证码 " value=""/>
+    			<br><b>* 请输入正确的验证码</b><br>
+    			<input type="button" id="btn" value="提交" /><br>
     			<div id="span">
     				
     			<span id="left-span">
@@ -90,6 +101,62 @@
     				
     			还没注册? <a href="#">注册</a>
     			</span>
+    			<script type="text/javascript">
+    				var oTxt1 = document.getElementById('txt1');
+    				var oTxt2 =document.getElementById('txt2');
+    				var oTxt3 =document.getElementById('txt3');
+    				var oPwd1 = document.getElementById('pwd1');
+    				var oPwd2 = document.getElementById('pwd2');
+    				var oBtn = document.getElementById("btn");
+    				var oB =document.getElementsByTagName('b');
+    				oTxt1.onblur = function(){
+    					let rel = /\w{11}/;
+    					var str = this.value;
+    					if(rel.test(str)){
+    						oB[0].style.display='none'
+    					}else{
+    						oB[0].style.display='block'
+    					}
+    					
+    				}
+    				
+    				oTxt3.onblur = function(){
+    					let rel = /^\w+([-+.]\w+)@\w+([-.]\w+).\w+([-.]\w+)*$/;
+    					var str = this.value;
+    					if(rel.test(str)){
+    						oB[1].style.display = 'none'
+    					}else{
+    						oB[1].style.display = 'block'
+    					}
+    				}
+    				oPwd1.onblur = function(){
+    					let rel = /\w{6,18}/;
+    					var str = this.value;
+    					if(rel.test(str)){
+    						oB[2].style.display = 'none'
+    					}else{
+    						oB[2].style.display = 'block'
+    					}
+    				}
+    				oPwd2.onblur = function(){
+    					
+    					if(this.value == oPwd1.value){
+    						oB[3].style.display = 'none'
+    					}else{
+    						oB[3].style.display = 'block'
+    					}
+    				}
+    				oTxt2.onblur = function(){
+    					let rel = /\w{4}/;
+    					var str = this.value;
+    					if(rel.test(str)){
+    						oB[4].style.display = 'none'
+    					}else{
+    						oB[4].style.display = 'block'
+    					}
+    				}
+    			</script>
+		  		</form>
     		</div>
     	</div>
 		  </div>

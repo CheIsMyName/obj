@@ -64,23 +64,61 @@
     </div>
 		  <div class="col-xs-4 "><div id="content">
     	<div id="left">
-					<img src="img/guanggao1.jpg"/>    		
+					<img src="img/guanggao1.jpg"/>    
+					
     	</div>
     	
     
     	
     </div>
     </div>
+    
     <div class="col-xs-2">
     	
     </div>
 		  <div class="col-xs-4 ">
 		  	<div id="right">
+		  		<form action="index.html" method="">
     		<p>登录</p>
     		
-    			<img src="img/user-30.png"/><input type="text" placeholder="手机号"/><br>
-    			<img src="img/lock-30.png"/><input type="password" placeholder="密码" /><br>
+    			<img src="img/user-30.png"/><input type="text" id="text" placeholder="手机号/邮箱/用户名" value=""/><br>
+    			<b id='right-b'>* 请输入正确的手机号/邮箱/用户名</b><br>
+    			<img src="img/lock-30.png"/><input type="password" id="pwd" placeholder="密码" /> <br>
+    				<b id="right-b2"> *密码必须包括字母数字</b><br>
+    			<img src="img/lock-30.png"/><input type="text" id="verify" placeholder="验证码" /> <br>
+    				<b id="right-b3"> *请输入正确得验证码</b><br>
     			<input type="button" id="btn" value="登录" /><br>
+    			
+    			
+		  	
+    			<script type="text/javascript">
+    				var oTxt = document.getElementById('text');
+    				var oPwd= document.getElementById("pwd");
+    				var oI = document.getElementsByTagName('b')[0];
+    				var oB2 =document.getElementsByTagName("b")[1];
+    				oTxt.onblur = function(){
+//  					left rel = /\^[1][0-9]{11}/
+							let rel = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/ ||/^\w+([-+.]\w+)@\w+([-.]\w+).\w+([-.]\w+)*$/ || /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
+							
+							var str = oTxt.value;
+							if(!rel.test(str)){
+								oI.style.display='block';
+							}else{
+								oI.style.display ='none';
+							}	
+    				}
+    				oPwd.onblur = function(){
+    					let rel = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
+    					var str = this.value;
+    					
+    					if(rel.test(str)){
+    						oB2.style.display='none';
+    					}else{
+    						oB2.style.display='block';
+    					}
+    				}
+    				
+    			</script>
     			<div id="span">
     				
     			<span id="left-span">
@@ -91,6 +129,7 @@
     				
     			还没注册? <a href="#">注册</a>
     			</span>
+		  		</form>
     		</div>
     	</div>
 		  </div>
@@ -151,6 +190,8 @@
 		 	<h5>备案号: 苏ICP备13029268号</h5>
 		 </div>
 		 	  
+		 	 
+		  
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
