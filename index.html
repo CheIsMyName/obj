@@ -61,7 +61,7 @@
 			  <div class="col-xs-4 "></div>
 		  </div>
 		  
-		<div id="myCarousel" class="carousel slide">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2500">
     <!-- 轮播（Carousel）指标 -->
     <ol class="carousel-indicators ">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -71,7 +71,7 @@
         
     </ol>   
     <!-- 轮播（Carousel）项目 -->
-    <div class="carousel-inner data-interval">
+    <div class="carousel-inner ">
         <div class="item active">
             <a href=""><img src="img/img1.jpg" alt="First slide"></a>
         </div>
@@ -84,6 +84,11 @@
         <div class="item">
             <a href=""><img src="img/img4.jpg" alt="Third slide"></a>
         </div>
+        <!--<script type="text/javascript">
+        	$(function(){
+        		$("#myCarousel"),carousel('cycle');
+        	})
+        </script>-->
     </div>
     <!-- 轮播（Carousel）导航 -->
     
@@ -94,6 +99,8 @@
 </div>	  
 
 	 </div> 
+	
+	
 	
 		  <div id="select">
 		  	<ul>
@@ -181,6 +188,20 @@
 		  		</li>
 		  	</ul>
 		  </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
 	<div class="container" id="brand">
 			  <div class="col-xs-2 "><span>品牌汇</span> &nbsp;HOTBRAND</div>
 			  <div class="col-xs-1 "></div>
@@ -235,7 +256,7 @@
 		  </div>
 	<div id="hotproduct" class="container">
 		<div id="left">
-			<img src="img/qianggou1.jpg"/>
+			<img id="first-child" src="img/qianggou1.jpg"/>
 			<img class="imgleft" src="img/qianggou2_r1_c4.jpg"/>
 			<img class="imgleft" src="img/qianggou2_r2_c1.jpg"/>
 			<img class="imgleft" src="img/qianggou2_r2_c6.jpg" alt="" />

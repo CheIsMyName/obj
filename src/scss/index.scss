@@ -71,9 +71,10 @@ body{
 }
 #head #txt{
     border:red 2px solid;
-    
-    width:400px;
+    text-align: center;
+    width:62%;
     height:36px;
+    
 }
 #head #btn{
     margin-top: 20px;
@@ -203,7 +204,7 @@ body{
 }
 #hotbrand ul{
     float:left;
-    width:130px;
+    width:11%;
     
 }
 #hotbrand ul li{
@@ -214,7 +215,7 @@ body{
     border:solid red 1px ;
 }
 #hotbrand #last{
-    width:352px;
+    width:19%px;
     height:206px;
     
     margin-bottom: 0;
@@ -224,8 +225,8 @@ body{
     width:300px
 }
 #hotbrand #last img{
-    width:298px;
-    height:203px;
+    width:100%;
+    height:100%;
     
 }
 #products span{
@@ -235,35 +236,46 @@ body{
 #hotproduct #left{
     float:left;
 }
-#hotproduct #left:first-child {
-    width:779px;
+#hotproduct #left{
+    width:70%;
     height:288px;
+}
+#first-child{
+   
+    width: 100%;
 }
 .imgleft{
     margin-top:20px;
-    width:252px;
+    width:32%;
     height:122px;
 }
 #hotproduct #right{
     float:right;
+    width:28%;
+    height:377px;
 }
 #hotproduct #right img{
     
-    width:310px;
-    height:432px;
+    width:100%;
+    height:100%;
 }
 #hotproduct img{
+    
     border: solid 1px transparent;
 }
 #hotproduct img:hover{
     opacity: 0.5;   
     border:solid red 1px;
 }
+#rightimg1,#rightimg2,#rightimg3,#rightimg4,#rightimg5,#rightimg6{
+    padding-right:0;
+}
 #floor1{
+    
     padding-top:40px;
 }
 #floor1 p{
-    width:250px;
+    width:100%;
     height:60px;
     background: blue;
     color:#fff;
@@ -275,33 +287,34 @@ body{
 }
 #floor1 a{
     
-    margin:30px;
+    margin:18px;
 }
 #floor1 a:hover{
     color: #000000;
 }
 #floor1 #rightimg1 img{
+    margin-bottom: 30px;
     border: solid 1px transparent;
-    width:146px;
+    width:32%;
     
 }
 #floor1 #rightimg1 img:hover{
     opacity: 0.5;
     border:solid red 1px;
 }
-
+#floor1 #center1{
+    height:380px;
+}
 #floor1 #center1 img{
-    height:360px;
-    width:333px;
+    height:100%;
+    width:100%;
 }
 
 
 
-#floor2{
-    padding-top:40px;
-}
+
 #floor2 p{
-    width:250px;
+    width:100%;
     height:60px;
     background: yellow;
     color:#fff;
@@ -313,33 +326,36 @@ body{
 }
 #floor2 a{
     
-    margin:30px;
+    margin:18px;
 }
 #floor2 a:hover{
     color: #000000;
 }
 #floor2 #rightimg2 img{
+     margin-bottom: 30px;
     border: solid 1px transparent;
-    width:146px;
+    width:32%;
     
 }
 #floor2 #rightimg2 img:hover{
     opacity: 0.5;
     border:solid red 1px;
 }
-
+#floor2 #center2{
+    height:380px;
+}
 #floor2 #center2 img{
-    height:360px;
-    width:333px;
+
+    
+    height:100%;
+    width:100%;
 }
 
 
 
-#floor3{
-    padding-top:40px;
-}
+
 #floor3 p{
-    width:250px;
+    width:100%;
     height:60px;
     background: green;
     color:#fff;
@@ -351,32 +367,33 @@ body{
 }
 #floor3 a{
     
-    margin:30px;
+    margin:18px;
 }
 #floor3 a:hover{
     color: #000000;
 }
 #floor3 #rightimg3 img{
+    margin-bottom: 30px;
     border: solid 1px transparent;
-    width:146px;
+    width:32%;
     
 }
 #floor3 #rightimg3 img:hover{
     opacity: 0.5;
     border:solid red 1px;
 }
-
+#floor3 #center3{
+    height:380px;
+}
 #floor3 #center3 img{
-    height:360px;
-    width:333px;
+    height:100%;
+    width:100%;
 }
 
 
-#floor4{
-    padding-top:40px;
-}
+
 #floor4 p{
-    width:250px;
+    width:100%;
     height:60px;
     background: purple;
     color:#fff;
@@ -388,31 +405,32 @@ body{
 }
 #floor4 a{
     
-    margin:30px;
+    margin:18px;
 }
 #floor4 a:hover{
     color: #000000;
 }
 #floor4 #rightimg4 img{
+   margin-bottom: 30px;
     border: solid 1px transparent;
-    width:146px;
+    width:32%;
     
 }
 #floor4 #rightimg4 img:hover{
     opacity: 0.5;
     border:solid red 1px;
 }
-
+#floor4 #center,{
+    height:380px;
+}
 #floor4 #center4 img{
-    height:360px;
-    width:333px;
+    height:100%;
+    width:100%;
 }
 
-#floor5{
-    padding-top:40px;
-}
+
 #floor5 p{
-    width:250px;
+    width:100%;
     height:60px;
     background: indianred;
     color:#fff;
@@ -424,24 +442,27 @@ body{
 }
 #floor5 a{
     
-    margin:30px;
+    margin:18px;
 }
 #floor5 a:hover{
     color: #000000;
 }
 #floor5 #rightimg5 img{
+   margin-bottom: 30px;
     border: solid 1px transparent;
-    width:146px;
+    width:32%;
     
 }
 #floor5 #rightimg5 img:hover{
     opacity: 0.5;
     border:solid red 1px;
 }
-
+#floor5 #center5{
+    height:380px;
+}
 #floor5 #center5 img{
-    height:360px;
-    width:333px;
+    height:100%;
+    width:100%;
 }
 
 
@@ -449,10 +470,10 @@ body{
 #floor6{
     padding-bottom: 20px;
     
-    padding-top:40px;
+   
 }
 #floor6 p{
-    width:250px;
+    width:100%;
     height:60px;
     background: darkgoldenrod;
     color:#fff;
@@ -464,24 +485,27 @@ body{
 }
 #floor6 a{
     
-    margin:30px;
+    margin:18px;
 }
 #floor6 a:hover{
     color: #000000;
 }
 #floor6 #rightimg6 img{
+   margin-bottom: 30px;
     border: solid 1px transparent;
-    width:146px;
+    width:32%;
     
 }
 #floor6 #rightimg6 img:hover{
     opacity: 0.5;
     border:solid red 1px;
 }
-
+#floor6 #center6{
+    height:380px;
+}
 #floor6 #center6 img{
-    height:360px;
-    width:333px;
+    height:100%;
+    width:100%;
 }
 
 

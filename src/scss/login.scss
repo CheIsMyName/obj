@@ -73,3 +73,24 @@
     color:red;
     left:80px
 }
+#code{  
+                font-family:Arial;  
+                font-style:italic;  
+                font-weight:bold;  
+                border:0;  
+                letter-spacing:2px;  
+                color:blue;  
+            }
+ #right #code{  
+    font-family:Arial;  
+    font-style:italic;  
+    font-weight:bold;  
+    border:0;  
+    letter-spacing:2px;  
+    color:blue;  
+    width:50px;
+}
+
+#right #input{
+    width:143px;
+}

@@ -17,7 +17,7 @@
 }
 #right{
     background:#F2F2F2;
-    height:430px;
+    height:472px;
    
     text-align: center;
 }
@@ -67,4 +67,17 @@
     display: none;
     color:red;
     left:103px;
+}
+ #right #code{  
+    font-family:Arial;  
+    font-style:italic;  
+    font-weight:bold;  
+    border:0;  
+    letter-spacing:2px;  
+    color:blue;  
+    width:50px;
+}
+
+#right #input{
+    width:143px;
 }

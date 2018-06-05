@@ -85,8 +85,13 @@
     			<b id='right-b'>* 请输入正确的手机号/邮箱/用户名</b><br>
     			<img src="img/lock-30.png"/><input type="password" id="pwd" placeholder="密码" /> <br>
     				<b id="right-b2"> *密码必须包括字母数字</b><br>
-    			<img src="img/lock-30.png"/><input type="text" id="verify" placeholder="验证码" /> <br>
-    				<b id="right-b3"> *请输入正确得验证码</b><br>
+    			<img src="img/lock-30.png"/>
+    			
+    		<input type = "text" id = "input" value="" /> 输入验证码
+    		<br /><b id="right-b3">验证码错误，请从新输入</b><br />
+        <input type = "button" id="code" onclick="createCode()"/>看不清，换一张
+        
+        
     			<input type="button" id="btn" value="登录" /><br>
     			
     			
@@ -96,6 +101,18 @@
     				var oPwd= document.getElementById("pwd");
     				var oI = document.getElementsByTagName('b')[0];
     				var oB2 =document.getElementsByTagName("b")[1];
+    				var oB3 = document.getElementsByTagName('b')[2];
+    				
+    				var oInp=document.getElementById('input');
+    				var oCode = document.getElementById('code');
+    				oInp.onblur=function(){
+    					if(oInp.value == oCode.value){
+    						oB3.style.display='none';
+    						
+    					}else{
+    						oB3.style.display='block'
+    					}
+    				}
     				oTxt.onblur = function(){
 //  					left rel = /\^[1][0-9]{11}/
 							let rel = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/ ||/^\w+([-+.]\w+)@\w+([-.]\w+).\w+([-.]\w+)*$/ || /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
@@ -118,7 +135,38 @@
     					}
     				}
     				
-    			</script>
+    				
+    		
+    	//设置一个全局的变量，便于保存验证码
+    var code;
+    function createCode(){
+        //首先默认code为空字符串
+        code = '';
+        //设置长度，这里看需求，我这里设置了4
+        var codeLength = 4;
+        var codeV = document.getElementById('code');
+        //设置随机字符
+        var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R', 'S','T','U','V','W','X','Y','Z');
+        //循环codeLength 我设置的4就是循环4次
+        for(var i = 0; i < codeLength; i++){
+            //设置随机数范围,这设置为0 ~ 36
+             var index = Math.floor(Math.random()*36);
+             //字符串拼接 将每次随机的字符 进行拼接
+             code += random[index]; 
+        }
+        //将拼接好的字符串赋值给展示的Value
+        codeV.value = code;
+    }
+
+    //下面就是判断是否== 的代码，无需解释
+   
+
+    //设置此处的原因是每次进入界面展示一个随机的验证码，不设置则为空
+    window.onload = function (){
+
+        createCode();
+    }
+    </script>
     			<div id="span">
     				
     			<span id="left-span">
