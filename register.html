@@ -77,16 +77,17 @@
     </div>
 		  <div class="col-xs-4 ">
 		  	<div id="right">
-		  		<form action="login.html" method="post">
+		  		<form action="register-test.php" method="post">
 		  	
     		<p>注册</p>
-    		
-    			<img src="img/user-30.png"/><input type="text" id="txt1" placeholder="手机号" value=""/>
+    			<img src="img/user-30.png"/><input type="text" name="uname" id="uname" placeholder="用户名/字母开头4-15位" value="" /><br />
+    			<br /><b>*请输入正确得用户名</b>
+    			<img src="img/user-30.png"/><input type="text" id="uphone" placeholder="手机号" value=""/>
     			<br> <b>* 请输人正确的手机号</b><br>
-    			<img src="img/user-30.png"/><input type="text" id="txt3" placeholder="邮箱" value=""/>
+    			<img src="img/user-30.png"/><input type="text" id="uemail" placeholder="邮箱" value=""/>
     			<br> <b>* 请输人正确的邮箱格式</b><br>
     			
-    			<img src="img/lock-30.png"/><input type="password" id="pwd1" placeholder="密码" value=""/>
+    			<img src="img/lock-30.png"/><input type="password" id="pwd" placeholder="密码" value=""/>
     			<br><b>* 必须由字母数字组成</b><br>
     			<img src="img/lock-30.png"/><input type="password" id="pwd2" placeholder="确认密码"  value="" />
     			<br><b>* 密码不一致</b><br>
@@ -144,7 +145,7 @@
     			<br><b>* 请输入正确的验证码</b><br>
     			-->
     			
-    			<input type="button" id="btn" value="提交" /><br>
+    			<input type="submit" id="btn" value="注册" /><br>
     			<div id="span">
     				
     			<span id="left-span">
@@ -156,46 +157,47 @@
     			还没注册? <a href="#">注册</a>
     			</span>
     			<script type="text/javascript">
-    				var oTxt1 = document.getElementById('txt1');
+    				var oUname = document.getElementById('uname');
+    				var oTxt1 = document.getElementById('uphone');
 //  				var oTxt2 =document.getElementById('txt2');
-    				var oTxt3 =document.getElementById('txt3');
-    				var oPwd1 = document.getElementById('pwd1');
+    				var oTxt3 =document.getElementById('uemail');
+    				var oPwd1 = document.getElementById('pwd');
     				var oPwd2 = document.getElementById('pwd2');
     				var oBtn = document.getElementById("btn");
     				var oB =document.getElementsByTagName('b');
 //  				var oChecked = document.getElementById('checked');
     				var oInp=document.getElementById('input');
     				var oCode = document.getElementById('code');
+    				oUname.onblur = function(){
+    					let rel =/^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
+    					var str = this.value;
+    					if(rel.test(str)){
+    							oB[0].style.display='none'
+    					}else{
+    						oB[0].style.display='block'
+    					}
+    				}
     				oInp.onblur=function(){
     					if(oInp.value == oCode.value){
-    						oB[4].style.display='none';
+    						oB[5].style.display='none';
     						
     					}else{
-    						oB[4].style.display='block'
+    						oB[5].style.display='block'
     					}
     				}
     				oTxt1.onblur = function(){
-    					let rel = /\w{11}/;
+    					let rel = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
     					var str = this.value;
     					if(rel.test(str)){
-    						oB[0].style.display='none'
+    						oB[1].style.display='none'
     					}else{
-    						oB[0].style.display='block'
+    						oB[1].style.display='block'
     					}
     					
     				}
     				
     				oTxt3.onblur = function(){
-    					let rel = /^\w+([-+.]\w+)@\w+([-.]\w+).\w+([-.]\w+)*$/;
-    					var str = this.value;
-    					if(rel.test(str)){
-    						oB[1].style.display = 'none'
-    					}else{
-    						oB[1].style.display = 'block'
-    					}
-    				}
-    				oPwd1.onblur = function(){
-    					let rel = /\w{6,18}/;
+    					let rel = /[0-9]{6,15})@\w+([-.]\w+).\w+([-.]\w+)*$/;
     					var str = this.value;
     					if(rel.test(str)){
     						oB[2].style.display = 'none'
@@ -203,12 +205,21 @@
     						oB[2].style.display = 'block'
     					}
     				}
-    				oPwd2.onblur = function(){
-    					
-    					if(this.value == oPwd1.value){
+    				oPwd1.onblur = function(){
+    					let rel = /\w{6,18}/;
+    					var str = this.value;
+    					if(rel.test(str)){
     						oB[3].style.display = 'none'
     					}else{
     						oB[3].style.display = 'block'
+    					}
+    				}
+    				oPwd2.onblur = function(){
+    					
+    					if(this.value == oPwd1.value){
+    						oB[4].style.display = 'none'
+    					}else{
+    						oB[4].style.display = 'block'
     					}
     				}
 //  				oTxt2.onblur = function(){

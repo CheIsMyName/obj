@@ -80,10 +80,10 @@
     </div>
 		  <div class="col-xs-4 ">
 		  	<div id="right">
-		  		<form action="index.html" method="">
+		  		<form action="login-test.php" method="">
     		<p>登录</p>
     		
-    			<img src="img/user-30.png"/><input type="text" id="text" placeholder="手机号/邮箱/用户名" value=""/><br>
+    			<img src="img/user-30.png"/><input type="text" id="uname" placeholder="手机号/邮箱/用户名" value=""/><br>
     			<b id='right-b'>* 请输入正确的手机号/邮箱/用户名</b><br>
     			<img src="img/lock-30.png"/><input type="password" id="pwd" placeholder="密码" /> <br>
     				<b id="right-b2"> *密码必须包括字母数字</b><br>
@@ -94,12 +94,12 @@
         <input type = "button" id="code" onclick="createCode()"/>看不清，换一张
         
         
-    			<input type="button" id="btn" value="登录" /><br>
+    			<input type="submit" id="btn" value="登录" /><br>
     			
     			
 		  	
     			<script type="text/javascript">
-    				var oTxt = document.getElementById('text');
+    				var oTxt = document.getElementById('uname');
     				var oPwd= document.getElementById("pwd");
     				var oI = document.getElementsByTagName('b')[0];
     				var oB2 =document.getElementsByTagName("b")[1];
