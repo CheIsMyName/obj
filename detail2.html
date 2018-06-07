@@ -1,19 +1,20 @@
-<<html lang="zh-CN">
+<html lang="zh-CN">
   <head>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>Bootstrap 101 Template</title>
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/public.min.css"/>
+		
 		<link rel="stylesheet" type="text/css" href="css/detail.min.css"/>
+		<script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/detail.js" type="text/javascript" charset="utf-8"></script>
 		
-		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/detail.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+	
 	<body>
-		
-		
 		<div id="top" >
 	   	<img src="img/0408939bg.jpg"/>
 		<div class="row " >
@@ -59,119 +60,23 @@
     	<a href="">手机  </a>
     </div>
     
-      <div id="center">
-		<div id="div1">
-			<div class="small_pic">
-				<span class="mark"></span>   <!--遮罩层-->
-				<span class="float_layer"></span>
-				<img id="s-img1" src="img/lg-03.jpg" />
-				<img id="s-img2" src="img/lg-01.jpg"/>
-				<img id="s-img3" src="img/lg-04.jpg" alt="" />
-				<img id="s-img4" src="img/lg-02.jpg" alt="" />
-				
-			</div>
-			<div id="bottom">
-				<a id='a1' href="#"><img src="img/small-03.jpg"/></a>
-				<a id="a2" href="#"><img src="img/md-01.jpg"/></a>
-				<a id="a3" href="#"><img src="img/small-04.jpg"/></a>
-				<a id="a4" href="#"><img src="img/md-02.jpg"/></a>
-			</div>
-			<div class="big_pic">
-				<img id="b-img1" src="img/lg-03.jpg" />
-				<img id="b-img2" src="img/lg-01.jpg"/>
-				<img id="b-img3" src="img/lg-04.jpg"/>
-				<img id="b-img4" src="img/lg-02.jpg"/>
-			</div>
-		</div>
-	</body>
-	<script type="text/javascript">
-		
-		
-	</script>
-	<script type="text/javascript">
-		
-			//获取所需页面元素
-			//获取大盒子
-			let oBigDiv = document.getElementById("div1");
-			//获取小图所在的盒子
-			let oSmallPic = byClassName(document,'small_pic')[0];
-			//获取遮罩层
-			let oMark = byClassName(document,'mark')[0];
-			//获取滑块
-			let oFloat = byClassName(document,'float_layer')[0];
-			//获取大图所在的盒子
-			let oBigPic = byClassName(document,'big_pic')[0];
-			//获取大图
-			let oBigImage = oBigPic.getElementsByTagName('img')[0];
-			let oBigImage1 = oBigPic.getElementsByTagName('img')[1];
-			let oBigImage2 = oBigPic.getElementsByTagName('img')[2];
-			let oBigImage3 = oBigPic.getElementsByTagName('img')[3];
-			//给遮罩层加鼠标移入事件
-			oMark.onmouseenter = function(){
-				oFloat.style.display = 'block';
-				oBigPic.style.display = 'block';
-			}
-			//给遮罩层加鼠标移出事件
-			oMark.onmouseleave = function(){
-				oFloat.style.display = 'none';
-				oBigPic.style.display = 'none';
-			}
-			//鼠标跟随
-			oMark.onmousemove = function(evt){
-				//事件对象的兼容
-				let e = evt || window.event;
-				let left = e.pageX - oBigDiv.offsetLeft - oMark.offsetLeft - oFloat.offsetWidth / 2;
-				let top = e.pageY - oBigDiv.offsetTop - oMark.offsetTop - oFloat.offsetHeight / 2;
-				//设置边界
-				if(left <= oMark.offsetLeft){
-					left = oMark.offsetLeft;
-				}else if(left >= oMark.offsetWidth - oFloat.offsetWidth){
-					left = oMark.offsetWidth - oFloat.offsetWidth;
-				}
-				if(top <= oMark.offsetTop){
-					top = oMark.offsetTop;
-				}else if(top >= oMark.offsetHeight - oFloat.offsetHeight){
-					top = oMark.offsetHeight - oFloat.offsetHeight;
-				}
-				oFloat.style.left = left + 'px';
-				oFloat.style.top = top + 'px';
+    
+   <div id="center">
+   	
+    
+    		<div id="div1">  
+					<div class="small_pic">
+						<span class="mark"></span>   <!--遮罩层-->
+						<span class="float_layer"></span>
+						<img src="img/small1.jpg" />
+					</div>
+					<div class="big_pic">
+						<img src="img/big1.jpg" />
+					</div>
 				
 				
-				//计算滑块在小图中移动的比例
-				let pX = left / (oMark.offsetWidth - oFloat.offsetWidth);
-				let pY = top / (oMark.offsetHeight - oFloat.offsetHeight);
-				//设置大图的移动
-				oBigImage.style.left = - pX * (oBigImage.offsetWidth - oBigPic.offsetWidth) + 'px';
-				oBigImage.style.top = - pY * (oBigImage.offsetHeight - oBigPic.offsetHeight) + 'px';
-				oBigImage1.style.left = - pX * (oBigImage1.offsetWidth - oBigPic.offsetWidth) + 'px';
-				oBigImage1.style.top = - pY * (oBigImage1.offsetHeight - oBigPic.offsetHeight) + 'px';
-				oBigImage2.style.left = - pX * (oBigImage2.offsetWidth - oBigPic.offsetWidth) + 'px';
-				oBigImage2.style.top = - pY * (oBigImage2.offsetHeight - oBigPic.offsetHeight) + 'px';
-				oBigImage3.style.left = - pX * (oBigImage3.offsetWidth - oBigPic.offsetWidth) + 'px';
-				oBigImage3.style.top = - pY * (oBigImage3.offsetHeight - oBigPic.offsetHeight) + 'px';
-				
-			}
-			
-			
-			function byClassName(obj,className){
-				if(obj.getElementsByClassName){
-					return obj.getElementsByClassName(className);
-				}else{
-					let arr = [];
-					let eles = document.getElementsByTagName('*');
-					for(let i = 0,len = eles.length;i < len;i ++){
-						if(eles[i].className === className){
-							arr.push(eles[i]);
-						}
-					}
-					return arr;
-				}
-			}
-		
-	</script>
-	
-	
-	 <div id="right">
+			  </div>
+			  <div id="right">
 			  	<ul>
 			  		<li>美国 丨<a href=""> Apple 苹果</a></li>
 			  		<li><b>Apple 苹果 iPhone8 Plus (A1864) 64GB 移动联通电信4G手机 国内行货</b><br /></li>
@@ -596,7 +501,14 @@
     	
     </script>
     
-   <div id="border"></div>
+    
+    
+    
+    
+    
+    
+    
+    <div id="border"></div>
 		  
 		  <div id="last">
 		  	<ul>
