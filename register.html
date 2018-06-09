@@ -84,7 +84,7 @@
     			<br /><b>*请输入正确得用户名</b>
     			<img src="img/user-30.png"/><input type="text" id="uphone" placeholder="手机号" value=""/>
     			<br> <b>* 请输人正确的手机号</b><br>
-    			<img src="img/user-30.png"/><input type="text" id="uemail" placeholder="邮箱" value=""/>
+    			<img src="img/user-30.png"/><input type="email" id="uemail" placeholder="邮箱" value=""/>
     			<br> <b>* 请输人正确的邮箱格式</b><br>
     			
     			<img src="img/lock-30.png"/><input type="password" id="pwd" placeholder="密码" value=""/>
@@ -197,7 +197,7 @@
     				}
     				
     				oTxt3.onblur = function(){
-    					let rel = /[0-9]{6,15})@\w+([-.]\w+).\w+([-.]\w+)*$/;
+    					let rel = /^\w+([-+.]\w+)@\w+([-.]\w+).\w+([-.]\w+)*$/;
     					var str = this.value;
     					if(rel.test(str)){
     						oB[2].style.display = 'none'
